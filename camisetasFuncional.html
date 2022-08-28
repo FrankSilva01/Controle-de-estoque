@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Uniformes</title>
+    <link rel="stylesheet" href="./camisetas.css">
+    <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+</head>
+<body> 
+
+    
+    
+      <!-- Ir para o inicio -->
+      <div id="inicio"><a href="../index.html">Inicio</a></div>
+
+      <!-- Aba do estoque de camisetas -->
+        <div id="camisetas">
+          <a href="./camisetas.html"> C<br> a <br> m<br>i<br>s<br>e<br>t <br>a<br>s</a>
+        </div>
+  
+        <!-- Aba do estoque de calças -->
+        <div id="calcas">
+          <a href="./calcas.html"> C<br> a <br> l<br>ç<br>a<br>s</a>
+        </div>
+
+       <!-- Aba do estoque de protetores -->
+       <div id="protetor">
+        <a href="./protetor.html"> P<br>r<br>o<br>t<br>e<br>t<br>o<br>r</a>
+      </div>
+
+
+
+      <!-- Aba para acessar o estoque de calças -->
+      <!-- <div class="calcas">
+        <a href="./Abas_Painel/calcas.html"> C<br> a <br> l<br>ç<br>a<br>s<br></a>
+
+      </div> -->
+
+      <div id="container-painel">
+    <h1>Controle de estoque</h1>
+
+    Selecione a cor abaixo <br><br>
+    <label>Tipo</label>
+    <select id="tipo" aria-label="Default select example">
+        <option value="Camiseta ">Camiseta</option>
+      </select>
+
+      <label>Cor</label>
+      <select id="cor" aria-label="Default select example" required="true"> 
+        <option value="Cinza" id="cor" onclick="mostrarTabelaCinza()"> Cinza</option>
+        <option value="Azul Royal" id="cor" onclick="mostrarTabelaRoyal()">Azul Royal</option>
+        <option value="Azul Marinho" id="cor" onclick="mostrarTabelaMarinho()">Azul Marinho</option>
+        <option value="Branco" id="cor" onclick="mostrarTabelaBranca()">Branco</option>
+        <option value="Preto" id="cor" onclick="mostrarTabelaPreto()">Preto</option>
+        </select>  
+
+        
+
+          <br> <br>
+          <label>Tamanho</label> <br> <br>
+           <!-- <select id="numero" aria-label="Default select example" required="true"> -->
+           <!-- </select> --> 
+
+
+           <button value="P" id="tamanhoP" >P</button>
+           <button value="M" id="tamanhoM" >M</button>
+           <button value="G" id="tamanhoG" >G</button>
+           <button value="GG" id="tamanhoGg" >GG</button>
+           <button value="XXG" id="tamanhoXg" >XG</button>
+           <button value="XXG" id="tamanhoXxg" >XXG</button>
+           <button value="XXGG" id="tamanhoXxgg">XXGG</button>
+          <br> <br>     
+           <br>
+
+          <div type="text" id="quantia1"> Digite a quantidade
+            <input type="text" id="quantia" required="true">
+          </div> <br><br> 
+
+           <!-- <button id="adicionar" onclick="checarCor()">Adicionar</button>   -->
+          <button id="diminui">Diminuir</button> 
+          <button id="resetar" onclick="resetarEstoque()">Resetar</button>
+          <button>Consultar</button> <br><br>
+
+          <label for="quantia" id="total">Quantidade</label> <br><br><br><br><br>
+
+          <p>PS: Selecione uma cor e a tabela correspondente irá aparecer</p>
+        </div>
+
+          <table class="table" id="camisetasCinza">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Camiseta</td>
+                <td>Cinza</td>
+                <td id='tamanhoP'>P</td>
+                <td type='number' id='totalEstoquePCinza'>0</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Camiseta</td>
+                <td>Cinza</td>
+                <td id='tamanhoM'>M</td>
+                <td type='number' id='totalEstoqueMCinza'>0</td>
+              </tr>
+              <tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoG'>G</td>
+                  <td type='number' id='totalEstoqueGCinza'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoGg'>Gg</td>
+                  <td type='number' id='totalEstoqueGgCinza'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoXg'>Xg</td>
+                  <td type='number' id='totalEstoqueXgCinza'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoXxg'>XXG</td>
+                <td type='number' id='totalEstoqueXxgCinza'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoXxgg'>XXGG</td>
+                <td type='number' id='totalEstoqueXxggCinza'>0</td>
+                </tr>
+
+            </tbody>
+          </table>
+
+          <table class="table" id="camisetasRoyal" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Camiseta</td>
+                <td>Azul Royal</td>
+                <td id='tamanhoP'>P</td>
+                <td type='number' id='totalEstoquePRoyal'>0</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Camiseta</td>
+                <td>Azul Royal</td>
+                <td id='tamanhoM'>M</td>
+                <td type='number' id='totalEstoqueMRoyal'>0</td>
+              </tr>
+              <tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Camiseta</td>
+                  <td>Azul Royal</td>
+                  <td id='tamanhoG'>G</td>
+                  <td type='number' id='totalEstoqueGRoyal'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Camiseta</td>
+                  <td>Azul Royal</td>
+                  <td id="tamanhoGg">GG</td>
+                  <td type='number' id='totalEstoqueGgRoyal'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Camiseta</td>
+                  <td>Azul Royal</td>
+                  <td id="tamanhoXg">XG</td>
+                  <td type='number' id='totalEstoqueXgRoyal'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Azul Royal</td>
+                  <td id="tamanhoXxg">XXG</td>
+                  <td type='number' id='totalEstoqueXxgRoyal'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Azul Royal</td>
+                  <td id="tamanhoXxgg">XXGG</td>
+                  <td type='number' id='totalEstoqueXxggRoyal'>0</td>
+                </tr>
+
+            </tbody>
+          </table>
+
+          <table class="table" id="camisetasMarinho" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Camiseta</td>
+                <td>Azul Marinho</td>
+                <td >P</td>
+                <td id='totalEstoquePMarinho'>0</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Camiseta</td>
+                <td>Azul Marinho</td>
+                <td>M</td>
+                <td id=totalEstoqueMMarinho>0</td>
+              </tr>
+              <tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Camiseta</td>
+                  <td>Azul Marinho</td>
+                  <td>G</td>
+                  <td id=totalEstoqueGMarinho>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Camiseta</td>
+                  <td>Azul Marinho</td>
+                  <td>GG</td>
+                  <td id="totalEstoqueGgMarinho">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Camiseta</td>
+                  <td>Azul Marinho</td>
+                  <td>XG</td>
+                  <td id="totalEstoqueXgMarinho">0</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Camiseta</td>
+                    <td>Azul Marinho</td>
+                    <td>XXG</td>
+                    <td id="totalEstoqueXxgMarinho">0</td>
+                  </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Azul Marinho</td>
+                  <td>XXGG</td>
+                  <td id="totalEstoqueXxggMarinho">0</td>
+                </tr>
+
+            </tbody>
+          </table>
+
+          <table class="table" id="camisetasBranca" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Camiseta</td>
+                <td>Branco</td>
+                <td >P</td>
+                <td id="totalEstoquePBranca">0</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Camiseta</td>
+                <td>Branco</td>
+                <td>M</td>
+                <td id="totalEstoqueMBranca">0</td>
+              </tr>
+              <tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Camiseta</td>
+                  <td>Branco</td>
+                  <td>G</td>
+                  <td id="totalEstoqueGBranca">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Camiseta</td>
+                  <td>Branco</td>
+                  <td>GG</td>
+                  <td id="totalEstoqueGgBranca">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Camiseta</td>
+                  <td>Branco</td>
+                  <td>XG</td>
+                  <td id="totalEstoqueXgBranca">0</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Camiseta</td>
+                    <td>Branco</td>
+                    <td>XXG</td>
+                    <td id="totalEstoqueXxgBranca">0</td>
+                  </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Branco</td>
+                  <td>XXGG</td>
+                  <td id="totalEstoqueXxggBranca">0</td>
+                </tr>
+
+            </tbody>
+          </table>
+        
+          <table class="table" id="camisetasPreto">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Camiseta</td>
+                <td>Cinza</td>
+                <td id='tamanhoP'>P</td>
+                <td type='number' id='totalEstoquePPreto'>0</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Camiseta</td>
+                <td>Cinza</td>
+                <td id='tamanhoM'>M</td>
+                <td type='number' id='totalEstoqueMPreto'>0</td>
+              </tr>
+              <tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoG'>G</td>
+                  <td type='number' id='totalEstoqueGPreto'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoGg'>Gg</td>
+                  <td type='number' id='totalEstoqueGgPreto'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoXg'>Xg</td>
+                  <td type='number' id='totalEstoqueXgPreto'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoXxg'>XXG</td>
+                <td type='number' id='totalEstoqueXxgPreto'>0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Camiseta</td>
+                  <td>Cinza</td>
+                  <td id='tamanhoXxgg'>XXGG</td>
+                <td type='number' id='totalEstoqueXxggPreto'>0</td>
+                </tr>
+
+            </tbody>
+          </table>
+        
+
+
+      <script src="./camisetas.js"></script>
+       <!-- <script  type="text/javascript" src="./index.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&family=Roboto:wght@300;500;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: rgba(111, 135, 111, 0.575);
+    color: #000;
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#container-painel {
+   text-align: center;
+   display: inline-block;
+   justify-content: center;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: -300px;
+    left: 550px;
+    border: 1px solid #fff;
+    box-shadow: 10px 0px 5px 2px #111 ;
+    border-radius: 50px;
+}
+
+#container-painel h1 {
+    margin-top: 5px;
+    padding: 10px;
+    padding-top: 50px;
+
+}
+
+
+
+
+/* Aba do painel de controle para acessar o estoque de calças */
+#camisetas {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 210px;
+    position: relative; 
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    left: 490px;
+    top: 195px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    
+}
+
+#camisetas:hover {
+  box-shadow: 10px 0px 5px 2px #111 ;
+  z-index: 9999;  
+}
+
+#calcas {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 130px;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    left: 490px;
+    top: 195px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+   
+}
+
+#calcas:hover {
+  box-shadow: 10px 0px 5px 2px #111 ;
+  z-index: 9999;  
+}
+  
+
+#protetor {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 160px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    left: 490px;
+    top: 195px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+#protetor:hover {
+  box-shadow: 10px 0px 5px 2px #111 ;
+  z-index: 9999;  
+}
+
+#inicio {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    left: 590px;
+    top:195px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+
+}
+
+#inicio:hover {
+  box-shadow: 10px 0px 5px 2px #111 ;
+  z-index: 9999;  
+}
+
+#camisa-icon {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    left: 85px;
+    bottom: 25px;
+}
+
+section {
+    position: relative;
+    left: 500px;
+    font-size: 18px;
+    width: 60px;
+    height: 160px;
+   
+  }
+  section img {
+    position: relative;
+    right: 10px;
+  }
+  
+  .face {
+    width: 60px;
+    height: 160px;
+    perspective: 700px;
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 700ms;
+  }
+  
+  .front {
+    background: limegreen;
+    z-index: 1;
+  }
+  
+  .back {
+    font-size: 12px;
+    background: lightslategray;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+  }
+  
+  .face:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+  }
+  
+  .face:hover .back {
+    transform: rotateY(0);
+    z-index: 1;
+  }
+
+
+table {
+    position: relative;
+    bottom: 400px;
+    left: 1100px;
+    border: 1px solid #fff;
+}
+
+table th row, table td {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #fff;
+    text-align: center;
+}

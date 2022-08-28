@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Uniformes</title>
+    <link rel="stylesheet" href="./calcas.css">
+    <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+</head>
+<body> 
+
+    
+  <!-- Ir para o inicio -->
+  <div id="inicio"><a href="../index.html">Inicio</a></div>
+
+  <!-- Aba do estoque de camisetas -->
+    <div id="camisetas">
+      <a href="./camisetasFuncional.html"> C<br> a <br> m<br>i<br>s<br>e<br>t <br>a<br>s</a>
+    </div>
+
+    <!-- Aba do estoque de calças -->
+    <div id="calcas">
+      <a href="./calcas.html"> C<br> a <br> l<br>ç<br>a<br>s</a>
+    </div>
+
+     <!-- Aba do estoque de protetores -->
+     <div id="protetor">
+        <a href="./protetor.html"> P<br>r<br>o<br>t<br>e<br>t<br>o<br>r</a>
+      </div>
+
+
+
+      <!-- Aba para acessar o estoque de calças -->
+      <!-- <div class="calcas">
+        <a href="./Abas_Painel/calcas.html"> C<br> a <br> l<br>ç<br>a<br>s<br></a>
+
+      </div> -->
+
+      <div id="container-painel">
+    <h1>Controle de estoque</h1>
+    <label>Tipo</label>
+    <select id="tipo" aria-label="Default select example">
+        <option value="Calça ">Calça</option>
+      </select>
+
+      <label>Cor</label>
+      <select id="cor" aria-label="Default select example" required="true">
+          <option value="Azul" onclick="mostrarTabelaCalcaAzul()">Azul</option>
+     
+        </select> 
+
+          <br> <br>
+          <label>Tamanho</label> <br> <br>
+          <!-- Select dando a opção do cliente escolher o tamanho -->
+          <!-- <select id="tamanho" aria-label="Default select example" required="true">
+            </select> -->
+            <button value="P" id="tamanhoP" onclick="alterarTamanhoP()">P</button>
+              <button value="M" id="tamanhoM" onclick="alterarTamanhoM()">M</button>
+              <button value="G" id="tamanhoG" onclick="alterarTamanhoG()">G</button>
+              <button value="GG" id="tamanhoGg" onclick="alterarTamanhoGg()">GG</button>
+              <button value="XXG" id="tamanhoXg" onclick="alterarTamanhoXg()">XG</button>
+              <button value="XXG" id="tamanhoXxg" onclick="alterarTamanhoXxg()">XXG</button>
+              <button value="XXGG" id="tamanhoXxgg" onclick="alterarTamanhoXxgg()">XXGG</button>
+             <br> <br>
+
+             <!-- Campo de quantia para o cliente digitar a quantidade -->
+          <!-- <div type="text" id="quantia1"> Digite a quantidade
+            <input type="text" id="quantia" required="true">
+          </div> <br><br> -->
+
+          <button id="adicionar" >Adicionar</button>
+          <button id="diminui">Diminuir</button> 
+          <button id="resetar" onclick="zerarEstoque()">Resetar</button>
+          <button >Consultar</button> <br><br>
+
+          <label for="quantia" id="total">Quantidade</label><br><br><br><br><br><br><br><br>
+          <p>PS: Selecione uma cor e a tabela correspondente irá aparecer</p>
+        </div>
+
+          <table class="table" id="calcaAzul" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Calças</td>
+                <td>Azul</td>
+                <td id="tamanhoP">P</td>
+                <td id="totalEstoqueP">0</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Calças</td>
+                <td>Azul</td>
+                <td id="tamanhoM">M</td>
+                <td id="totalEstoqueM">0</td>
+              </tr>
+              <tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Calças</td>
+                  <td>Azul</td>
+                  <td id="tamanhoG">G</td>
+                  <td type='number' id="totalEstoqueG">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Calças</td>
+                  <td>Azul</td>
+                  <td id="tamanhoGg">GG</td>
+                  <td type='number' id="totalEstoqueGg">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Calças</td>
+                  <td>Azul</td>
+                  <td id="tamanhoXg">XG</td>
+                  <td type='number' id="totalEstoqueXg">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Calças</td>
+                  <td>Azul</td>
+                  <td id="tamanhoXxg">XXG</td>
+                  <td type='number' id="totalEstoqueXxg">0</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Calças</td>
+                  <td>Azul</td>
+                  <td id="tamanhoXxgg">XXGG</td>
+                  <td type='number' id="totalEstoqueXxgg">0</td>
+                </tr>
+
+            </tbody>
+          </table>
+        
+
+      <script src="./calcas.js"></script>
+       <!-- <script  type="text/javascript" src="./index.js"></script> -->
+</body>
+</html>

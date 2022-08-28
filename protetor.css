@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#container-painel {
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+     width: 500px;
+     height: 500px;
+     position: relative;
+     top: -300px;
+     left: 750px;
+     border: 1px solid #fff;
+ }
+
+#container-painel h1 {
+    margin-top: 5px;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+/* Aba do painel de controle para acessar o estoque de calças */
+
+
+/* Aba do painel de controle para acessar o estoque de camisetas */
+#camisetas {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 180px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    left: 690px;
+    top: 150px;
+    border: 1px solid #fff;
+    z-index: 9999;  
+}
+
+#calcas {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 120px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    left: 690px;
+    top: 150px;
+    border: 1px solid #fff;
+    z-index: 9999;  
+}
+
+#protetor {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 150px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    left: 690px;
+    top: 150px;
+    border: 1px solid #fff;
+    z-index: 9999;  
+}
+
+#inicio {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    left: 750px;
+    top:150px;
+    border: 1px solid #fff;
+    z-index: 9999;  
+}
+table {
+    position: relative;
+    bottom: 700px;
+    left: 1300px;
+    border: 1px solid #fff;
+}
+
+table th row, table td {
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #fff;
+    text-align: center;
+}

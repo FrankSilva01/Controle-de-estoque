@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Uniformes</title>
+    <link rel="stylesheet" href="./protetor.css">
+    <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+</head>
+<body> 
+
+    
+    
+      <!-- Ir para o inicio -->
+      <div id="inicio"><a href="../index.html">Inicio</a></div>
+
+      <!-- Aba do estoque de camisetas -->
+        <div id="camisetas">
+          <a href="./camisetasFuncional.html"> C<br> a <br> m<br>i<br>s<br>e<br>t <br>a<br>s</a>
+        </div>
+  
+        <!-- Aba do estoque de calças -->
+        <div id="calcas">
+          <a href="./calcas.html"> C<br> a <br> l<br>ç<br>a<br>s</a>
+        </div>
+
+        <!-- Aba do estoque de protetores -->
+        <div id="protetor">
+          <a href="./protetor.html"> P<br>r<br>o<br>t<br>e<br>t<br>o<br>r</a>
+        </div>
+
+
+      <!-- Aba para acessar o estoque de calças -->
+      <!-- <div class="calcas">
+        <a href="./Abas_Painel/calcas.html"> C<br> a <br> l<br>ç<br>a<br>s<br></a>
+
+      </div> -->
+
+      <div id="container-painel">
+    <h1>Controle de estoque</h1>
+    <label>Tipo</label>
+    <select id="tipo" aria-label="Default select example" disabled="disabled">
+        <option value="Camiseta ">Camiseta</option>
+      </select>
+
+      <label>Cor</label>
+      <select id="cor" aria-label="Default select example" required="true" disabled="disabled">
+          <option value="Cinza " id="cor">Cinza</option>
+          <option value="Azul Royal " id="cor">Azul Royal</option>
+          <option value="Azul Marinho " id="cor">Azul Marinho</option>
+          <option value="Branco " id="cor">Branco</option>
+          <option value="Preto " id="cor">Preto</option>
+        </select> 
+
+          <br> <br>
+          <label>Tamanho</label> <br> <br>
+          <select id="tamanho" aria-label="Default select example" required="true" disabled="disabled">
+              <option value="p" >P</option>
+              <option value="m" >M</option>
+              <option value="g" >G</option>
+              <option value="gg" >GG</option>
+              <option value="xg" >XG</option>
+              <option value="xxg" >XXG</option>
+              <option value="xxgg">XXGG</option>
+            </select> <br> <br>
+
+          <div type="text" id="quantia1"> Digite a quantidade
+            <input type="text" id="quantia" required="true">
+          </div> <br><br>
+
+          <button id="adicionar" onclick="adicionarAoEstoque()">Adicionar</button> 
+          <button id="diminuir" onclick="retirarDoEstoque()">Diminuir</button> 
+          <button id="resetar" onclick="zerarEstoque()">Zerar Estoque</button>
+          <button onclick="listarEstoque()">Consultar</button> <br><br>
+
+          <label id="quantidade">Quantidade</label>
+        </div>
+
+          <table class="table" id="protetorEstoque" >
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td id="tipo">Protetor Auricular</td>
+                <td id="total">0</td>
+              </tr>
+
+            </tbody>
+          </table>
+        
+
+          <script src="./protetor.js"></script>
+       <!-- <script  type="text/javascript" src="./index.js"></script> -->
+</body>
+</html>
