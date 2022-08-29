@@ -19,6 +19,8 @@ a {
     text-decoration: none;
 }
 
+
+/*Container principal com todos os itens, exceto as abas de calça, camisetas, protetores e inicio*/
 #container-painel {
     text-align: center;
     display: inline-block;
@@ -39,10 +41,7 @@ a {
      padding-top: 50px;
  
  }
- 
-
-/* Aba do painel de controle para acessar o estoque de calças */
-
+/*Fim container do painel principal*/
 
 /* Aba do painel de controle para acessar o estoque de camisetas */
 #camisetas {
@@ -69,7 +68,10 @@ a {
     box-shadow: 10px 0px 5px 2px #111 ;
     z-index: 9999;  
   }
+
+/*Fim aba painel camisetas*/
   
+/* Aba do painel de controle para acessar o estoque de calças */
   #calcas {
       color: #fff;
       font-size: 16px;
@@ -93,6 +95,10 @@ a {
     z-index: 9999;  
   }
 
+/*Fim aba painel calça*/
+
+/* Aba do painel de controle para acessar o estoque de protetores */
+
   #protetor {
     color: #fff;
     font-size: 16px;
@@ -115,6 +121,10 @@ a {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
 }
+
+/*Fim aba painel calça*/
+
+/* Aba do painel de controle para acessar o inicio */
 
 #inicio {
     color: #fff;
@@ -150,6 +160,12 @@ a {
     z-index: 9999;  
   }
 
+/*Fim aba painel inicio*/
+
+/* Configurações das tabelas de cada cor, como tamanho e altura
+    Estão como display None para quando a opção for clicada no painel principal ativa a função do JS para mostrar a tabela.
+*/
+
 table #camisetasRoyal {
    display: none;
     width: 330px;
@@ -181,8 +197,9 @@ display: none;
     display: none;
     width: 345px;
  }
+/*Fim das configurações dos tamanhos de cada tabela*/
 
-
+/*Configurações gerais de todas as tabelas*/
 table {
     position: relative;
     bottom: 700px;
