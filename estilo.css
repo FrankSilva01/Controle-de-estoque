@@ -9,7 +9,7 @@
 }
 
 body {
-    background: rgba(111, 135, 111, 0.575);
+    background: rgba(115, 179, 167, 0.648);
     color: #000;
     text-decoration: none;
 }
@@ -49,8 +49,9 @@ a {
     font-weight: bold;
     text-align: center;
     width: 60px;
-    height: 210px;
+    height: 190px;
     position: relative; 
+    justify-content: center;
     display: flex;
     align-items: center; 
     flex-direction: column;
@@ -60,6 +61,15 @@ a {
     border-radius: 10px;
     
 }
+
+/* #camisetas-icon {
+  display: block;
+  position: relative;
+  left: 485px;
+  top: 100px;
+  width: 60px;
+  
+} */
 
 #camisetas:hover {
   box-shadow: 10px 0px 5px 2px #111 ;
@@ -80,7 +90,6 @@ a {
     top: 195px;
     border: 1px solid #fff;
     border-radius: 10px;
-   
 }
 
 #calcas:hover {
@@ -93,6 +102,7 @@ a {
     color: #fff;
     font-weight: bold;
     text-align: center;
+    justify-content: center;
     width: 60px;
     height: 160px;
     position: relative; 
@@ -113,29 +123,34 @@ a {
     color: #fff;
     font-weight: bold;
     text-align: center;
-    width: 60px;
+    width: 90px;
     height: 25px;
     position: relative; 
+    justify-content: center;
     display: flex;
     flex-direction: column;
     left: 590px;
-    top:195px;
+    top:173px;
     border: 1px solid #fff;
-    border-radius: 50px;
+    border-radius: 20px;
 
+}
+
+#inicio img {
+  position: relative;
+  top: 1.5px;
+  width: 20px;
+  
+}
+
+#inicio a {
+  position: relative;
+  bottom: .195px;
 }
 
 #inicio:hover {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
-}
-
-#camisa-icon {
-    width: 40px;
-    height: 30px;
-    position: relative;
-    left: 85px;
-    bottom: 25px;
 }
 
 section {
