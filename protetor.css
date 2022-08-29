@@ -19,6 +19,7 @@ a {
     text-decoration: none;
 }
 
+/*Container do painel principal onde esta todos os elementos, exceto as abas de camisetas, protetores, calças e inicio*/
 #container-painel {
     text-align: center;
     display: inline-block;
@@ -39,9 +40,7 @@ a {
      padding-top: 50px;
  
  }
- 
-
-/* Aba do painel de controle para acessar o estoque de calças */
+/*Fim painel principal*/
 
 
 /* Aba do painel de controle para acessar o estoque de camisetas */
@@ -69,7 +68,10 @@ a {
     box-shadow: 10px 0px 5px 2px #111 ;
     z-index: 9999;  
   }
-  
+/*Fim aba camisetas*/
+
+
+/* Aba do painel de controle para acessar o estoque de calças */
   #calcas {
       color: #fff;
       font-size: 16px;
@@ -92,7 +94,10 @@ a {
     box-shadow: 10px 0px 5px 2px #111 ;
     z-index: 9999;  
   }
+/*Fim aba das calças*/
 
+
+/* Aba do painel de controle para acessar o estoque de protetores */
   #protetor {
     color: #fff;
     font-size: 16px;
@@ -115,6 +120,9 @@ a {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
 }
+/*Fim aba dos protetores*/
+
+/*Botão para ir ao inicio  */
 
 #inicio {
     color: #fff;
@@ -149,6 +157,12 @@ a {
     box-shadow: 10px 0px 5px 2px #111 ;
     z-index: 9999;  
   }
+
+/* Fim do inicio */
+
+
+/* Tabela do estoque de protetores */
+
 table {
     position: relative;
     bottom: 700px;
