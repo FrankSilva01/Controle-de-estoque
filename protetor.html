@@ -13,7 +13,7 @@
     
     
       <!-- Ir para o inicio -->
-      <div id="inicio"><a href="../index.html">Inicio</a></div>
+      <div id="inicio" ><a href="../index.html">Inicio <img src="https://cdn-icons-png.flaticon.com/128/2/2144.png"> </a></div>
 
       <!-- Aba do estoque de camisetas -->
         <div id="camisetas">
@@ -30,13 +30,9 @@
           <a href="./protetor.html"> P<br>r<br>o<br>t<br>e<br>t<br>o<br>r</a>
         </div>
 
-
-      <!-- Aba para acessar o estoque de calças -->
-      <!-- <div class="calcas">
-        <a href="./Abas_Painel/calcas.html"> C<br> a <br> l<br>ç<br>a<br>s<br></a>
-
       </div> -->
 
+    <!-- Container painel principal, os select estão desabilitados por não ter necessidade do mesmo, para ativar basta remover o disabled="disabled" -->
       <div id="container-painel">
     <h1>Controle de estoque</h1>
     <label>Tipo</label>
@@ -44,6 +40,7 @@
         <option value="Camiseta ">Camiseta</option>
       </select>
 
+       <!-- Esse campo esta desabilitado por não haver necessidade dele nessa tabela, para ativar basta remover o disabled="disabled"-->
       <label>Cor</label>
       <select id="cor" aria-label="Default select example" required="true" disabled="disabled">
           <option value="Cinza " id="cor">Cinza</option>
@@ -54,6 +51,8 @@
         </select> 
 
           <br> <br>
+          
+          <!-- Esse campo esta desabilitado por não haver necessidade dele nessa tabela, para ativar basta remover o disabled="disabled"-->
           <label>Tamanho</label> <br> <br>
           <select id="tamanho" aria-label="Default select example" required="true" disabled="disabled">
               <option value="p" >P</option>
@@ -65,10 +64,12 @@
               <option value="xxgg">XXGG</option>
             </select> <br> <br>
 
+          <!-- Irei acrescentar mais a frente a opção de acrescentar a quantidade de acordo com o valor digitado e usarei esses campos abaixo-->
           <div type="text" id="quantia1"> Digite a quantidade
             <input type="text" id="quantia" required="true">
           </div> <br><br>
 
+          <!--Botões de adicionar, remover, zerar e listar estoque ##O botão de consultar não esta funcionando ainda, não trabalhei nele nesse momento -->
           <button id="adicionar" onclick="adicionarAoEstoque()">Adicionar</button> 
           <button id="diminuir" onclick="retirarDoEstoque()">Diminuir</button> 
           <button id="resetar" onclick="zerarEstoque()">Zerar Estoque</button>
@@ -77,6 +78,7 @@
           <label id="quantidade">Quantidade</label>
         </div>
 
+    <!-- Tabela do estoque -->
           <table class="table" id="protetorEstoque" >
             <thead>
               <tr>
