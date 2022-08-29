@@ -13,7 +13,8 @@
     
     
       <!-- Ir para o inicio -->
-      <div id="inicio"><a href="../index.html">Inicio</a></div>
+      <div id="inicio" ><a href="./index.html">Inicio <img src="https://cdn-icons-png.flaticon.com/128/2/2144.png"> </a></div>
+
 
       <!-- Aba do estoque de camisetas -->
         <div id="camisetas">
@@ -38,6 +39,7 @@
 
       </div> -->
 
+    <!-- Container painel principal contento todos os itens, exceto aba do inicio, camisetas, calças e protetores -->
       <div id="container-painel">
     <h1>Controle de estoque</h1>
 
@@ -47,6 +49,7 @@
         <option value="Camiseta ">Camiseta</option>
       </select>
 
+          <!-- Select contendo as opções de escolha das cores para o usuário escolher -->
       <label>Cor</label>
       <select id="cor" aria-label="Default select example" required="true"> 
         <option value="Cinza" id="cor" onclick="mostrarTabelaCinza()"> Cinza</option>
@@ -55,14 +58,10 @@
         <option value="Branco" id="cor" onclick="mostrarTabelaBranca()">Branco</option>
         <option value="Preto" id="cor" onclick="mostrarTabelaPreto()">Preto</option>
         </select>  
-
-        
-
           <br> <br>
-          <label>Tamanho</label> <br> <br>
-           <!-- <select id="numero" aria-label="Default select example" required="true"> -->
-           <!-- </select> --> 
-
+          
+          <!-- Botões para o usuário adicionar no estoque o tamanho na tabela do tamanho que o botão for clicado -->
+          <label>Tamanho</label> <br> <br> 
 
            <button value="P" id="tamanhoP" >P</button>
            <button value="M" id="tamanhoM" >M</button>
@@ -74,20 +73,24 @@
           <br> <br>     
            <br>
 
+          <!-- Irei acrescentar a opção de acrescentar itens no estoque com a quantidade digitada porém no momento não está em funcionamento-->
           <div type="text" id="quantia1"> Digite a quantidade
             <input type="text" id="quantia" required="true">
           </div> <br><br> 
 
-           <!-- <button id="adicionar" onclick="checarCor()">Adicionar</button>   -->
+           <!-- Botões para retirar itens do estoque, resetar e consultar o estoque atual, no momento nenhum esta funcional e no futuro acrescentarei as demais funções  -->
           <button id="diminui">Diminuir</button> 
           <button id="resetar" onclick="resetarEstoque()">Resetar</button>
           <button>Consultar</button> <br><br>
 
+          <!--Em breve irei acrescentar a opção de adicionar ao estoque digitando o valor -->
           <label for="quantia" id="total">Quantidade</label> <br><br><br><br><br>
 
           <p>PS: Selecione uma cor e a tabela correspondente irá aparecer</p>
         </div>
 
+    
+        <!-- Tabelas do estoque de cada cor de camiseta disponível -->
           <table class="table" id="camisetasCinza">
             <thead>
               <tr>
