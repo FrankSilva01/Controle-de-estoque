@@ -12,10 +12,9 @@ let tamanhoGg = document.getElementById('tamanhoGg');
 let tamanhoXg = document.getElementById('tamanhoXg');
 let tamanhoXxg = document.getElementById('tamanhoXxg');
 let tamanhoXxgg = document.getElementById('tamanhoXxgg');
-// let tamanhos = [tamanhoP, tamanhoM, tamanhoG, tamanhoGg, tamanhoXg, tamanhoXxg];
-// let tamanho = document.getElementById('tamanho').value;
 
-// Quantidade do estoque de cada tamanho
+
+//Váriaveis pegando a quantidade do estoque de cada tamanho
 
 let totalEstoqueP = document.getElementById('totalEstoqueP').value;
 let totalEstoqueM = document.getElementById('totalEstoqueM').value;
@@ -29,10 +28,59 @@ let totalEstoqueXxgg = document.getElementById('totalEstoqueXxgg').value;
 
 
 
+// Função para mostrar a tabela de calças da cor Azul e acrescentar ao estoque de acordo com o botão de tamanho clicado.
 function mostrarTabelaCalcaAzul() {
     calcaAzul.style.display = "block";
-}
 
+     
+    let estoqueTotalP = 0;
+    let estoqueTotalM = 0;
+    let estoqueTotalG = 0;
+    let estoqueTotalGg = 0;
+    let estoqueTotalXg = 0;
+    let estoqueTotalXxg = 0;
+    let estoqueTotalXxgg = 0;
+    
+    tamanhoP.onclick = function() {
+        
+        estoqueTotalP+=1;
+document.getElementById('totalEstoqueP').innerHTML = estoqueTotalP;
+    }  
+    
+        tamanhoM.onclick = function() { 
+           
+            estoqueTotalM+=1;     
+    document.getElementById('totalEstoqueM').innerHTML = estoqueTotalM;
+        }  
+       
+            tamanhoG.onclick = function() {
+                estoqueTotalG+=1;
+        document.getElementById('totalEstoqueG').innerHTML = estoqueTotalG;
+            }      
+             
+                tamanhoGg.onclick = function() {
+                    estoqueTotalGg+=1;
+            document.getElementById('totalEstoqueGg').innerHTML = estoqueTotalGg;
+                }  
+              
+                    tamanhoXg.onclick = function() {
+                        estoqueTotalXg+=1;
+                document.getElementById('totalEstoqueXg').innerHTML = estoqueTotalXg;
+                    }  
+                
+                        tamanhoXxg.onclick = function() {
+                            estoqueTotalXxg+=1;
+                    document.getElementById('totalEstoqueXxg').innerHTML = estoqueTotalXxg;
+                        }  
+                                            
+                            tamanhoXxgg.onclick = function() {
+                                estoqueTotalXxgg+=1;
+                        document.getElementById('totalEstoqueXxgg').innerHTML = estoqueTotalXxgg;
+                            }     
+                        }           
+
+
+//**NÃO ESTA FUNCIONANDO COMO DEVIA, IREI CORRIGIR EM BREVE**
 // Função para resetar os itens da tabela
 function zerarEstoque() {
     resetar.onclick = function() {
@@ -46,56 +94,9 @@ function zerarEstoque() {
          }
      }
 
-// Adicionar itens na quantidade de cada tamanho na tabela
-             function alterarTamanhoP() {
-                tamanhoP.onclick = function() {
-              count+=1;
-            document.getElementById('totalEstoqueP').innerHTML = count;
-                }  
-                }
-                    function alterarTamanhoM() {    
-                        tamanhoM.onclick = function() {
-                    count+=1;
-                    document.getElementById('totalEstoqueM').innerHTML = count;
-                        }  
-                        }
-
-                        function alterarTamanhoG() {            
-                            tamanhoG.onclick = function() {
-                        count+=1;
-                        document.getElementById('totalEstoqueG').innerHTML = count;
-                            }  
-                            }
-
-                            function alterarTamanhoGg() {             
-                                tamanhoGg.onclick = function() {
-                            count+=1;
-                            document.getElementById('totalEstoqueGg').innerHTML = count;
-                                }  
-                                }
-
-                                function alterarTamanhoXg() {    
-                                    tamanhoXg.onclick = function() {
-                                count+=1;
-                                document.getElementById('totalEstoqueXg').innerHTML = count;
-                                    }  
-                                    }
-
-                                    function alterarTamanhoXxg() {
-                                        tamanhoXxg.onclick = function() {
-                                    count+=1;
-                                    document.getElementById('totalEstoqueXxg').innerHTML = count;
-                                        }  
-                                        }
-
-                                        function alterarTamanhoXxgg() {   
-                                            tamanhoXxgg.onclick = function() {
-                                        count+=1;
-                                        document.getElementById('totalEstoqueXxgg').innerHTML = count;
-                                            }  
-                                            }
          
-// Remover itens do estoque de cada tamanho da tabela
+// **NÃO FUNCIONAL NO MOMENTO**
+// Remover  os itens do estoque de cada tamanho da tabela
 
 function diminuirTamanhoP() {
    
