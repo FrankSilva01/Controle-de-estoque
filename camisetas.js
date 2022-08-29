@@ -5,16 +5,15 @@ const camisetaCinza = document.getElementById('camisetasCinza');
 const camisetaMarinho = document.getElementById('camisetasMarinho');
 const camisetasBranca = document.getElementById('camisetasBranca');
 const camisetasPreto = document.getElementById('camisetasPreto');
-var select = document.getElementById('cor')
-var cor = select.options[select.selectedIndex].value;
+
 let resetar = document.getElementById('reset');
 
-
-// Pegar o valor de cada tabela de cada cor
 
 
 
 // Funções para mostrar cada tabela selecionada
+
+// Função para mostrar a tabela correspondente da cor AZUL ROYAL e acrescentar ao estoque de acordo com o tamanho apertado no botão do painel 
 function mostrarTabelaRoyal() {
     camisetaRoyal.style.display = "block";
     camisetaCinza.style.display = "none";
@@ -69,6 +68,8 @@ document.getElementById('totalEstoquePRoyal').innerHTML = estoqueTotalP;
                             }     
                         }                    
 
+
+// Função para mostrar a tabela correspondente da cor CINZA e acrescentar ao estoque de acordo com o tamanho apertado no botão do painel 
 function mostrarTabelaCinza() {
     camisetaCinza.style.display = "block";
     camisetaRoyal.style.display = "none";
@@ -122,6 +123,8 @@ function mostrarTabelaCinza() {
                             }        
                             
 
+
+// Função para mostrar a tabela correspondente da cor AZUL MARINHO e acrescentar ao estoque de acordo com o tamanho apertado no botão do painel 
 function mostrarTabelaMarinho() {
     camisetaMarinho.style.display = "block";
     camisetaCinza.style.display = "none";
@@ -175,6 +178,7 @@ function mostrarTabelaMarinho() {
                                                             }    
 
 
+// Função para mostrar a tabela correspondente da cor BRANCA e acrescentar ao estoque de acordo com o tamanho apertado no botão do painel 
 
 function mostrarTabelaBranca() {
     camisetasBranca.style.display = "block";
@@ -228,6 +232,8 @@ document.getElementById('totalEstoquePBranca').innerHTML = estoqueTotalP;
                         }         
 
 
+
+// Função para mostrar a tabela correspondente da cor PRETA e acrescentar ao estoque de acordo com o tamanho apertado no botão do painel 
 function mostrarTabelaPreto() {
     camisetasPreto.style.display = "block"; 
     camisetasBranca.style.display = "none";
@@ -279,7 +285,11 @@ document.getElementById('totalEstoquePPreto').innerHTML = estoqueTotalP;
                             }     
                         }     
 
-    // Função para zerar toda a quantidade no estoque de todos os itens
+
+
+    //**AINDA NÃO ESTÁ FUNCIONAL**
+
+    // Função para zerar toda a quantidade no estoque de todos os itens, 
 
     function resetarEstoque() {
     function zerarEstoqueMarinho() {
