@@ -43,7 +43,7 @@ a {
 
 
 
-/* Aba do painel de controle para acessar o estoque de camisetas */
+/* Aba do painel de controle para acessar o estoque de calças */
 #camisetas {
     color: #fff;
     font-weight: bold;
@@ -62,14 +62,20 @@ a {
     
 }
 
+/* #camisetas-icon {
+  display: block;
+  position: relative;
+  left: 485px;
+  top: 100px;
+  width: 60px;
+  
+} */
+
 #camisetas:hover {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
 }
 
-/*Fim da aba das camisetas*/
-
-/* Aba do painel de controle para acessar o estoque de calças */
 #calcas {
     color: #fff;
     font-weight: bold;
@@ -90,9 +96,8 @@ a {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
 }
-/*Fim da aba das calças*/
   
-/* Aba do painel de controle para acessar o estoque de protetores */
+
 #protetor {
     color: #fff;
     font-weight: bold;
@@ -113,10 +118,6 @@ a {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
 }
-/*Fim da aba dos protetores*/
-
-
-/* Aba do painel de controle para voltar ao ínicio */
 
 #inicio {
     color: #fff;
@@ -150,23 +151,4 @@ a {
 #inicio:hover {
   box-shadow: 10px 0px 5px 2px #111 ;
   z-index: 9999;  
-}
-
-/* Fim do inicio */
-
-/**/
-
-table {
-    position: relative;
-    bottom: 400px;
-    left: 1100px;
-    border: 1px solid #fff;
-}
-
-table th row, table td {
-    font-size: 20px;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #fff;
-    text-align: center;
 }
