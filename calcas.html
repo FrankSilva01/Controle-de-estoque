@@ -12,7 +12,7 @@
 
     
   <!-- Ir para o inicio -->
-  <div id="inicio"><a href="../index.html">Inicio</a></div>
+  <div id="inicio" ><a href="./index.html">Inicio <img src="https://cdn-icons-png.flaticon.com/128/2/2144.png"> </a></div>
 
   <!-- Aba do estoque de camisetas -->
     <div id="camisetas">
@@ -29,14 +29,7 @@
         <a href="./protetor.html"> P<br>r<br>o<br>t<br>e<br>t<br>o<br>r</a>
       </div>
 
-
-
-      <!-- Aba para acessar o estoque de calças -->
-      <!-- <div class="calcas">
-        <a href="./Abas_Painel/calcas.html"> C<br> a <br> l<br>ç<br>a<br>s<br></a>
-
-      </div> -->
-
+    <!-- Container principal contendo todos os itens, exceto as abas de calça, camiseta, protetores e inicio-->
       <div id="container-painel">
     <h1>Controle de estoque</h1>
     <label>Tipo</label>
@@ -52,9 +45,8 @@
 
           <br> <br>
           <label>Tamanho</label> <br> <br>
-          <!-- Select dando a opção do cliente escolher o tamanho -->
-          <!-- <select id="tamanho" aria-label="Default select example" required="true">
-            </select> -->
+          <!-- Button para adicionar ao estoque o tamanho que for clicado na tabela correspondente -->
+    
             <button value="P" id="tamanhoP" onclick="alterarTamanhoP()">P</button>
               <button value="M" id="tamanhoM" onclick="alterarTamanhoM()">M</button>
               <button value="G" id="tamanhoG" onclick="alterarTamanhoG()">G</button>
@@ -64,20 +56,25 @@
               <button value="XXGG" id="tamanhoXxgg" onclick="alterarTamanhoXxgg()">XXGG</button>
              <br> <br>
 
-             <!-- Campo de quantia para o cliente digitar a quantidade -->
+             <!-- Campo de quantia para o cliente digitar a quantidade, irei adicionar no futuro essa opção -->
           <!-- <div type="text" id="quantia1"> Digite a quantidade
             <input type="text" id="quantia" required="true">
           </div> <br><br> -->
 
+            <!-- NÃO ESTÁ FUNCIONAL NO MOMENTO, IREI ADICIONAR EM BREVE -->
+            <!-- Botões de adicionar ao estoque, retirar, zerar o estoque e consultar o estoque -->
           <button id="adicionar" >Adicionar</button>
           <button id="diminui">Diminuir</button> 
           <button id="resetar" onclick="zerarEstoque()">Resetar</button>
           <button >Consultar</button> <br><br>
 
+          <!-- Irei acrescentar a opção de adicionar ao estoque de acordo com a quantidade digitada e usarei esses campos-->
           <label for="quantia" id="total">Quantidade</label><br><br><br><br><br><br><br><br>
           <p>PS: Selecione uma cor e a tabela correspondente irá aparecer</p>
         </div>
 
+    
+            <!-- Tabela com o campo de calças da cor azul -->
           <table class="table" id="calcaAzul" >
             <thead>
               <tr>
